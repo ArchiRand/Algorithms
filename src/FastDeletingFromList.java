@@ -8,12 +8,10 @@ public class FastDeletingFromList {
         for (int i = from + count, k = 0; i < list.size(); i++, k++) {
             result.set(from + k, result.get(i));
         }
-        System.out.println(result);
         int end = list.size() - 1;
         while (end != list.size() - 1 - count) {
             result.remove(end--);
         }
         return result;
     }
-
 }
